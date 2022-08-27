@@ -3,13 +3,13 @@ body{
 }
 
 h3{
-    color: whitesmoke;
+    color: black;
     background-color: darkgoldenrod;  
     width: 300px; 
 } 
 
 p{
-    color: antiquewhite;
+    color: black;
     background-color: darkgoldenrod;
     width: 400px;
 } 
