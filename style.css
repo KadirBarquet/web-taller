@@ -5,11 +5,13 @@ body{
 h3{
     color: black;
     background-color: darkgoldenrod;  
-    width: 300px; 
+    width: 400px; 
+    height: 10px;
 } 
 
 p{
     color: black;
     background-color: darkgoldenrod;
     width: 400px;
+    height: 10px; 
 } 
