@@ -2,9 +2,13 @@ body{
     background-image: url(image/paginaweb.jpg);  
 }
 
+h1{
+    color: black;
+} 
+
 h2{
     color: black;
-    background-color: darkgoldenrod;
+    background-color: darkolivegreen;
     width: 400px; 
     margin: 0;
 }
@@ -22,4 +26,5 @@ p{
     background-color: darkgoldenrod;
     width: 400px;
     margin: 0;
+    margin-bottom: 20px; 
 } 
