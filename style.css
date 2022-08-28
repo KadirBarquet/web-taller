@@ -61,13 +61,13 @@ img{
 } 
 
 .menu_btn {
-    position: fixed; 
-    top: 20px; 
-    left: 20px; 
-    width: 26px; 
-    height: 25px;  
-    cursor: pointer; 
-    z-index: 1;
+   position: fixed; 
+   top: 20px; 
+   left: 20px; 
+   width: 26px; 
+   height: 25px; 
+   cursor: pointer; 
+   z-index: 1;
 } 
 
 .menu_btn > span,
@@ -86,22 +86,21 @@ img{
     top: -8px; 
 } 
 
-.menu_box > span::after {
-    content: ""; 
+.menu_btn > span::after {
+    content: "";
     top: 8px; 
 }
-
 .menu_box {
     display: block;
     position: fixed; 
     top: 0; 
     left: -100%; 
-    width: 100px; 
+    width: 100px;  
     height: 100%; 
     margin: 0; 
     padding: 80px 0; 
     list-style: none; 
-    background-color: lightskyblue;   
+    background-color: lightskyblue; 
     box-shadow: 2px 2px 6px black; 
     transition-duration: .25s;  
 } 
