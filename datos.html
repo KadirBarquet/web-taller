@@ -8,14 +8,20 @@
         <script>alert("Aqui encontraran unos datos sobre mi")</script> 
     </head>
     <body>
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="datos.html">Datos</a>
-            </li>
-        </ul> 
+        <div class="menu">
+            <input id="menu_toogle" type="checkbox" />
+            <label class="menu_btn" for="menu_toogle">
+                <span></span>
+            </label>
+            <ul class="menu_box"> 
+                <li>
+                    <a class="menu_item" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="menu_item" href="datos.html">Datos</a>
+                </li>
+            </ul>
+        </div> 
         <style> 
             body{
                 background-image: url(image/paginaweb.jpg);  
@@ -58,7 +64,90 @@
                 width: 400px; 
                 border: 3px solid black; 
         
+            } 
+
+            #menu_toogle{
+                opacity: 0;
             }
+
+            #menu_toogle:checked + .menu_btn > span {
+                transform: rotate(45deg); 
+            }
+
+            #menu_toogle:checked + .menu_btn > span::before {
+                top: 0;
+                transform: rotate(0deg); 
+            } 
+
+            #menu_toogle:checked + .menu_btn > span::after {
+                top: 0;
+                transform: rotate(90deg); 
+            } 
+
+            #menu_toogle:checked ~ .menu_box {
+                left: 0 !important;
+            } 
+
+            .menu_btn {
+               position: fixed; 
+               top: 20px; 
+               left: 20px; 
+               width: 26px; 
+               height: 25px; 
+               cursor: pointer; 
+               z-index: 1;
+            } 
+
+            .menu_btn > span,
+            .menu_btn > span::before,
+            .menu_btn > span::after {
+                display: block; 
+                position: absolute; 
+                width: 100%; 
+                height: 2px; 
+                background-color: aquamarine; 
+                transition-duration: .25s; 
+            } 
+
+            .menu_btn > span::before {
+                content: "";
+                top: -8px; 
+            } 
+
+            .menu_btn > span::after {
+                content: "";
+                top: 8px; 
+            }
+            .menu_box {
+                display: block;
+                position: fixed; 
+                top: 0; 
+                left: -100%; 
+                width: 100px;  
+                height: 100%; 
+                margin: 0; 
+                padding: 80px 0; 
+                list-style: none; 
+                background-color: lightskyblue; 
+                box-shadow: 2px 2px 6px black; 
+                transition-duration: .25s;  
+            } 
+
+            .menu_item {
+                display: block; 
+                padding: 12px 24px; 
+                color: black;  
+                font-family: "Roboto", sans-serif; 
+                font-size: 20px; 
+                font-weight: 600; 
+                text-decoration: none; 
+                transition-duration: .25s; 
+            } 
+
+            .menu_item:hover {
+                background-color: lightcyan; 
+            }
+            
         </style> 
 
         <h2 class="text-coral">Mis lenguajes de programación</h2> 
